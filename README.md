@@ -14,7 +14,28 @@ A node can:
 - have children nodes 
 - be a child of another node
 
-Here's a brief example: 
+Here's a dummy document:
+```
+animals
+    cat
+        color
+            black
+        size
+            40cm
+        sound
+            meow
+    dog
+        color   
+            brown
+        size
+            100cm
+        sound
+            bark
+```
+The `animals` node has 2 children nodes, `cat` and `dog`.
+The `cat` node has 3 children nodes, `color`, `size` and `sound` and so on.
+
+Here's more comprehensive example: 
 ```
 # https://capturetheatlas.com/photography-basics/ 
 
@@ -114,12 +135,4 @@ We can see what `exposure` is, the elements that compose it like `aperture`, `sh
 
 This methodology encourage a proactive search for structure while typing, which helps to:
 - better understand the data 
-- write less
-- well organize notes early on
-
-
-
-
-
-
-
+- write less verbose and more readable notes
