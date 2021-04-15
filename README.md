@@ -1,18 +1,21 @@
-# Studee
-Studee an app that allows to take notes and organize them logically with the minimum possible effort.
+# Node based documents
+## Take notes and organize them logically with the minimum possible effort
 
 There are 2 core concepts:
-- strip down words to absolute minimum. The idea is to promote readability and easier global structure overview.
-
-- use tabs to indent logically elements. Tabs allow to instantly create a parent-child association and keep an optimal readability, with just 1 keystroke.
-
+- strip down words to absolute minimum. The idea is to promote readability and easier global structure overview
+- use tabs to indent logically elements. Tabs allow to instantly create a parent-child association and keep an optimal readability, with just 1 keystroke
 
 ## Nodes
 The building block of a document is a **node**, which represents every line of the document. 
 
-A node can:
-- have children nodes 
-- be a child of another node
+Every document line has:
+- **text**: content of the line
+- **depth**: number of tabs 
+
+These line are eventually parsed to nodes, which have:
+- **text**: content of the line
+- **depth**: number of tabs 
+- **children**: every node that is after the current one that has a immediately higher depth
 
 Here's a dummy document:
 ```
@@ -30,11 +33,20 @@ animals
         size
             100cm
         sound
-            bark
+            woff
 ```
-The `animals` node has 2 children nodes, `cat` and `dog`.
-The `cat` node has 3 children nodes, `color`, `size` and `sound` and so on.
+The `animals` node has:
+- text: `animals`
+- depth: 0
+- children: `cat`, `dog`
 
+The `cat` node has:
+- text: `cat`
+- depth: 1
+- children: `color`, `size`, `sound`
+
+
+## Why use it?
 Here's more comprehensive example: 
 ```
 # https://capturetheatlas.com/photography-basics/ 
@@ -133,6 +145,8 @@ In the example above we can clearly see the general structure of the elements th
 
 We can see what `exposure` is, the elements that compose it like `aperture`, `shutter speed` and `ISO`, whether these elements share common features or not, how do they work, what they depend on.
 
-This methodology encourage a proactive search for structure while typing, which helps to:
-- better understand the information 
-- write less verbose and more readable notes
+This methodology encourage a **proactive search for structure** while typing, which helps to:
+- **better understand** the information 
+- write **less verbose** and **more readable** notes
+
+Moreover, a clearly defined structure allow the documents to be parsed and used to **create schemas and diagrams dinamically**, on the fly.
