@@ -1,0 +1,54 @@
+@import "abstracts/variables";
+
+.editor-wrapper {
+    padding: 0.5rem;
+
+    .editor {
+        background-color: #252525;
+        color: #e8e8e8;
+
+        padding: 0.5rem;
+
+        p {
+            margin: 0;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            color: #e8e8e8;
+            font-size: 16px;
+            font-weight: bold;
+            resize: none;
+            background-color:#252525;
+            padding: 0;
+
+            border: none;
+            outline: none;
+            line-height: 16px;
+        }
+
+        // TODO: problema testo troppo lungo trovare soluzione line wrap
+
+        input::selection, textarea::selection {
+            background: #484848; /* WebKit/Blink Browsers */
+        }
+        
+        input::-moz-selection, textarea::-moz-selection {
+            background: #484848; /* Gecko Browsers */
+        }
+
+        .node {
+            .wrapper{
+                height: 25px;
+            }
+
+            .tab {
+                flex: 0 0 30px;
+            }
+
+            .text {
+                flex-grow: 1;
+            }
+        }
+    }
+}

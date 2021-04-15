@@ -1,0 +1,38 @@
+
+// Import fonts
+@font-face {
+    font-family: "Poppins";
+    src: local("Poppins"), url(/assets/fonts/Poppins-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Poppins-ExtraBold";
+    src: local("Poppins-ExtraBold"), url(/assets/fonts/Poppins-ExtraBold.ttf) format("truetype");
+}
+
+
+// set global style
+* {
+    font-family: "Poppins", sans-serif;
+    /* Add !important to overwrite all elements */
+}
+
+input::-webkit-input-placeholder {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif!important
+}
+
+input:-ms-input-placeholder {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif!important;
+}
+
+input:-moz-placeholder {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif!important;
+}
+
+input::-moz-placeholder {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif!important;
+}
+
+body {
+    margin: 0;
+}

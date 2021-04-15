@@ -1,0 +1,10 @@
+<ul>
+    <li *ngFor="let c of node.children">
+        {{c.text}}
+        <small>{{c.depth}}</small>
+
+        <div *ngIf="c.children.length > 0">
+            <app-node-list [node]="c"></app-node-list>
+        </div>
+    </li>
+</ul>

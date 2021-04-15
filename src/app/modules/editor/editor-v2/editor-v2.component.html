@@ -1,0 +1,26 @@
+<!-- wrapper -->
+<div class="editor-wrapper" fxFlex="50" fxLayout="column">
+
+    <!-- editor -->
+    <div class="editor" fxFlex="100" fxLayout="column">
+        
+        <!-- nodes list -->
+        <div class="node" fxLayout="row" *ngFor="let n of nodes; index as i;" [style.order]="i" [hidden]="">
+            <div class="wrapper" fxLayout="row" *ngIf="i != editingNodeIndex" fxFlex="100" >
+                <div class="tab" *ngFor="let tab of array(n.depth)"></div>
+                <div class="text" contenteditable="true">{{n.text}}</div>
+            </div>
+        </div>
+
+        <!-- nodes editor -->
+ 
+    </div>
+
+    <!-- <app-node-list [node]="root"></app-node-list> -->
+     
+    <p>nodes: {{nodes.length}}</p> 
+    <p>last item depth: {{nodes[editingNodeIndex].depth}}</p> 
+</div>
+
+
+
