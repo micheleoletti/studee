@@ -134,5 +134,5 @@ In the example above we can clearly see the general structure of the elements th
 We can see what `exposure` is, the elements that compose it like `aperture`, `shutter speed` and `ISO`, whether these elements share common features or not, how do they work, what they depend on.
 
 This methodology encourage a proactive search for structure while typing, which helps to:
-- better understand the data 
+- better understand the information 
 - write less verbose and more readable notes
