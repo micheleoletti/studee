@@ -1,10 +1,7 @@
-<!-- wrapper -->
-<div class="editor-wrapper" fxFlex="50" fxLayout="column">
+<!-- <div class="editor-wrapper" fxFlex="50" fxLayout="column">
 
-    <!-- editor -->
     <div class="editor" fxFlex="100" fxLayout="column">
         
-        <!-- nodes list -->
         <div class="node" fxLayout="row" *ngFor="let n of nodes; index as i;" [style.order]="i" [hidden]="">
             <div class="wrapper" fxLayout="row" *ngIf="i != editingNodeIndex" fxFlex="100" >
                 <div class="tab" *ngFor="let tab of array(n.depth)"></div>
@@ -12,23 +9,20 @@
             </div>
         </div>
 
-        <!-- nodes editor -->
         <div class="node edit" [style.order]="editingNodeIndex">
             <div class="wrapper" fxLayout="row" fxFlex="100">
                 <div class="tab" *ngFor="let t of array(nodes[editingNodeIndex].depth)"></div>
                 
-                <!-- TODO: find solution for multiline text -->
                 <input type="text" class="text" [(ngModel)]="nodes[editingNodeIndex].text" placeholder="Inserisci dato">
             </div>
         </div>
 
     </div>
 
-    <!-- <app-node-list [node]="root"></app-node-list> -->
      
     <p>nodes: {{nodes.length}}</p> 
     <p>last item depth: {{nodes[editingNodeIndex].depth}}</p> 
 </div>
 
 
-
+ -->

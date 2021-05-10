@@ -7,12 +7,24 @@
         <!-- nodes list -->
         <div class="node" fxLayout="row" *ngFor="let n of nodes; index as i;" [style.order]="i" [hidden]="">
             <div class="wrapper" fxLayout="row" *ngIf="i != editingNodeIndex" fxFlex="100" >
+                <div>{{i}}</div>
                 <div class="tab" *ngFor="let tab of array(n.depth)"></div>
-                <div class="text" contenteditable="true">{{n.text}}</div>
+                <div class="text">{{n.text}}</div>
             </div>
         </div>
 
         <!-- nodes editor -->
+        <div class="node" fxLayout="row" [style.order]="editingNodeIndex" [hidden]="">
+            <div class="wrapper" fxLayout="row" fxFlex="100" >
+                <div>{{editingNodeIndex}}</div>
+                <!-- note editor tabs -->
+                <div class="tab" *ngFor="let t of array(nodes[editingNodeIndex].depth)"></div>
+
+                <!-- node editor input -->
+                <input type="text" pInputText [(ngModel)]="nodes[editingNodeIndex].text"
+                    placeholder="Inserisci dato"  />
+            </div>
+        </div>
  
     </div>
 
@@ -20,6 +32,7 @@
      
     <p>nodes: {{nodes.length}}</p> 
     <p>last item depth: {{nodes[editingNodeIndex].depth}}</p> 
+    <p>index: {{editingNodeIndex}}</p>
 </div>
 
 
